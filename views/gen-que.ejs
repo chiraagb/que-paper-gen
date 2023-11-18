@@ -1,0 +1,47 @@
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Question</title>
+  </head>
+  <body>
+    <h1><%= message%></h1>
+    <br />
+
+    <form action="/gen-que" method="post">
+      <input
+        type="number"
+        name="totalMarks"
+        placeholder="TotalMarks"
+        required
+      />
+      <br /><br />
+
+      <input
+        type="number"
+        name="easy"
+        placeholder="Easy Level(in %)"
+        required
+      />
+      <br /><br />
+
+      <input
+        type="number"
+        name="medium"
+        placeholder="Medium Level(in %)"
+        required
+      />
+      <br /><br />
+
+      <input
+        type="number"
+        name="hard"
+        placeholder="Hard Level(in %)"
+        required
+      />
+      <br /><br />
+
+      <button>Generate the Questions</button>
+    </form>
+    <button><a href="/create-que">Create More Questions</a></button>
+  </body>
+</html>

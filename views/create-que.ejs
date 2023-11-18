@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Add Question</title>
+  </head>
+  <body>
+    <h1><%=message%></h1>
+    <form action="/" method="post">
+      <input type="text" name="question" placeholder="Question" />
+      <br />
+      <br />
+
+      <input type="text" name="subject" placeholder="Subject" />
+      <br />
+      <br />
+
+      <input type="text" name="topic" placeholder="Topic" />
+      <br />
+      <br />
+
+      <label for="difficulty">Difficulty:</label>
+      <select name="difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <br />
+      <br />
+
+      <input type="number" name="marks" placeholder="Marks" />
+      <br />
+      <br />
+
+      <button>Create Question</button>
+    </form>
+    <br />
+    <button>
+      <a href="/gen-que">Generate Questions</a>
+    </button>
+  </body>
+</html>

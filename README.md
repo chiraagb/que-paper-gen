@@ -38,10 +38,10 @@
  3) Also, Questions must be unique, same subject can have many unique questions,same topic can have many unique questions. Therefore only the `question` attribute is made unique.And on clicking the create question button you'll be redirected to Home page
  4) On `localhost:3000/gen-que`, you'll see the following screen. you can either create more questions or generate questions based on the data we have created. The create-que data is stored in the JSON format.   ![image](https://github.com/chiraagb/que-paper-gen/assets/113826990/366a1b98-0f9c-4f45-815f-a9a29c7f6ae6)
  5) Here, we are not storing the `localhost:3000/gen-que` data on the database. We'll simply send the response back to the client(i.e, web browser).
- 6) Some constraints to keep in mind:
-    a) The `total` should add up to the difficulty `easy+medium+hard` percentages else a response `["Values don't add upto total]` will be sent.
-    b) We should have the data on the database with enough marks such that they add up to the individual difficulty marks.
-    c) For example, totalMarks is 100 out of which 20% are easy i.e, 20 marks are of easy question, 50% are medium i.e, 50 marks are of easy question, 30% are hard i.e., 30 marks are of hard questions.So we should have the data that adds upto 20 for wasy, 50 for medium, 30 for hard marks in the database.
-    d) Response would be sent in the JSON format to the client (i.e., Web Browser)
-    e) If you dont see the response, install the JSON Viewer extension in your browser
-        i) For Chrome : [CLick Here](https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+ 6) Some constraints to keep in mind:  
+    a) The `total` should add up to the difficulty `easy+medium+hard` percentages else a response `["Values don't add upto total]` will be sent.  
+    b) We should have the data on the database with enough marks such that they add up to the individual difficulty marks.  
+    c) For example, totalMarks is 100 out of which 20% are easy i.e, 20 marks are of easy question, 50% are medium i.e, 50 marks are of easy question, 30% are hard i.e., 30 marks are of hard questions.So we should have the data that adds upto 20 for wasy, 50 for medium, 30 for hard marks in the database.  
+    d) Response would be sent in the JSON format to the client (i.e., Web Browser)  
+    e) If you dont see the response, install the JSON Viewer extension in your browser  
+        i) For Chrome : [CLick Here](https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)  

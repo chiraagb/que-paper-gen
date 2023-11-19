@@ -53,7 +53,7 @@
   3) Then we take the marks of each difficulty and store it in the array : marksArray_easy, num_e is the size of the array with easy marks, ret[] is the new array, marks_easy is the array of objects where difficulty is easy, easy_que = totalM - (mediumPercentage + hardPercentage); and totalM = easyPercentage + mediumPercentage + hardPercentage;,  See the logic below
   4) ```
      async function generateQuestions(totalMarks,easyPercentage,mediumPercentage,hardPercentage) {
-     ...
+     ....
         for (let i = 0; i < marksArray_easy.length; i++) {
             if (easy_que >= marksArray_easy[i] && num_e > 0) {
               ret[j] = marks_easy[i];
@@ -64,7 +64,7 @@
             }
           }
         ret = ret.filter((element) => element !== null);
-     ...
+     ....
      }
      ```
 5) For more clarity, i have implemented the function in generate.js file

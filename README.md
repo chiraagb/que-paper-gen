@@ -44,4 +44,27 @@
     c) For example, totalMarks is 100 out of which 20% are easy i.e, 20 marks are of easy question, 50% are medium i.e, 50 marks are of easy question, 30% are hard i.e., 30 marks are of hard questions.So we should have the data that adds upto 20 for wasy, 50 for medium, 30 for hard marks in the database.  
     d) Response would be sent in the JSON format to the client (i.e., Web Browser)  
     e) If you dont see the response, install the JSON Viewer extension in your browser  
-        i) For Chrome : [CLick Here](https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)  
+        i) For Chrome : [CLick Here](https://chromewebstore.google.com/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+
+
+# How the Questions are generated Randomly?
+  1) we'll shuffle the array before implementing the actual function.
+  2) First we'll find the objects in the document with the individual difficulty (easy,medium,hard), then'll we'll shuffle the array
+  3) Then we take the marks of each difficulty and store it in the array : marksArray_easy, num_e is the size of the array with easy marks, ret[] is the new array, marks_easy is the array of objects where difficulty is easy, easy_que = totalM - (mediumPercentage + hardPercentage); and totalM = easyPercentage + mediumPercentage + hardPercentage;,  See the logic below
+  4) ```
+     async function generateQuestions(totalMarks,easyPercentage,mediumPercentage,hardPercentage) {
+     ...
+        for (let i = 0; i < marksArray_easy.length; i++) {
+            if (easy_que >= marksArray_easy[i] && num_e > 0) {
+              ret[j] = marks_easy[i];
+              easy_que -= marksArray_easy[i];
+              num_e--;
+              j++;
+            } else {
+            }
+          }
+        ret = ret.filter((element) => element !== null);
+     ...
+     }
+     ```
+5) For more clarity, i have implemented the function in generate.js file
